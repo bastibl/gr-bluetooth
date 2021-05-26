@@ -11,7 +11,8 @@ The gr-bluetooth web site is: http://gr-bluetooth.sourceforge.net
 
 Building
 --------
-gr-bluetooth currently requires gnuradio 3.7.0 or later.
+gr-bluetooth is compatible with GNU Radio 3.7 and 3.8. Please checkout the
+corresponding branches (i.e., `maint-3.7` and `maint-3.8`).
 
 To build gr-bluetooth:
 ```
