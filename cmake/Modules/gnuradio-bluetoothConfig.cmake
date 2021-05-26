@@ -1,5 +1,5 @@
 INCLUDE(FindPkgConfig)
-PKG_CHECK_MODULES(PC_BLUETOOTH bluetooth)
+PKG_CHECK_MODULES(PC_BLUETOOTH gnuradio-bluetooth)
 
 FIND_PATH(
     BLUETOOTH_INCLUDE_DIRS
@@ -24,7 +24,7 @@ FIND_LIBRARY(
           /usr/lib64
           )
 
-include("${CMAKE_CURRENT_LIST_DIR}/bluetoothTarget.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/gnuradio-bluetoothTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(BLUETOOTH DEFAULT_MSG BLUETOOTH_LIBRARIES BLUETOOTH_INCLUDE_DIRS)
