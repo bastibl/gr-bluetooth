@@ -1,11 +1,9 @@
 /* -*- c++ -*- */
 /* 
  * Copyright 2013 Christopher D. Kilgour
- * Copyright 2008, 2009 Dominic Spill, Michael Ossmann
- * Copyright 2007 Dominic Spill
+ * Copyright 2008, 2009 Dominic Spill, Michael Ossmann                                                                                            
+ * Copyright 2007 Dominic Spill                                                                                                                   
  * Copyright 2005, 2006 Free Software Foundation, Inc.
- * 
- * This file is part of gr-bluetooth
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,38 +22,37 @@
  */
 
 
-#ifndef INCLUDED_GR_BLUETOOTH_MULTI_SNIFFER_H
-#define INCLUDED_GR_BLUETOOTH_MULTI_SNIFFER_H
+#ifndef INCLUDED_BLUETOOTH_MULTI_UAP_H
+#define INCLUDED_BLUETOOTH_MULTI_UAP_H
 
-#include <gr_bluetooth/api.h>
-#include "gr_bluetooth/multi_block.h"
+#include <bluetooth/api.h>
+#include <bluetooth/multi_block.h>
 
 namespace gr {
   namespace bluetooth {
 
     /*!
-     * \brief <+description of block+>
+     * \brief Sniff Bluetooth packets.
      * \ingroup bluetooth
-     *
      */
-    class GR_BLUETOOTH_API multi_sniffer : virtual public multi_block
+    class BLUETOOTH_API multi_UAP : virtual public multi_block
     {
     public:
-       typedef boost::shared_ptr<multi_sniffer> sptr;
+       typedef boost::shared_ptr<multi_UAP> sptr;
 
        /*!
-        * \brief Return a shared_ptr to a new instance of gr::bluetooth::multi_sniffer.
+        * \brief Return a shared_ptr to a new instance of gr::bluetooth::multi_UAP.
         *
-        * To avoid accidental use of raw pointers, gr::bluetooth::multi_sniffer's
+        * To avoid accidental use of raw pointers, gr::bluetooth::multi_UAP's
         * constructor is in a private implementation
-        * class. gr::bluetooth::multi_sniffer::make is the public interface for
+        * class. gr::bluetooth::multi_UAP::make is the public interface for
         * creating new instances.
         */
-       static sptr make(double sample_rate, double center_freq, double squelch_threshold, bool tun);
+       static sptr make(double sample_rate, double center_freq, double squelch_threshold, int LAP);
     };
 
   } // namespace bluetooth
 } // namespace gr
 
-#endif /* INCLUDED_GR_BLUETOOTH_MULTI_SNIFFER_H */
+#endif /* INCLUDED_BLUETOOTH_MULTI_UAP_H */
 

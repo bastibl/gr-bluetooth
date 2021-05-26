@@ -1,12 +1,11 @@
-/* -*- c++ -*- */
 /*
- * Copyright 2012 Free Software Foundation, Inc.
+ * Copyright 2011 Free Software Foundation, Inc.
  *
- * This file is part of GNU Radio
+ * This file is a part of gr-bluetooth
  *
  * GNU Radio is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2, or (at your option)
+ * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
  *
  * GNU Radio is distributed in the hope that it will be useful,
@@ -20,19 +19,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef _QA_BLUETOOTH_H_
-#define _QA_BLUETOOTH_H_
+#ifndef INCLUDED_BLUETOOTH_API_H
+#define INCLUDED_BLUETOOTH_API_H
 
 #include <gnuradio/attributes.h>
-#include <cppunit/TestSuite.h>
 
-//! collect all the tests for the gr-filter directory
+#ifdef gnuradio_bluetooth_EXPORTS
+#define BLUETOOTH_API __GR_ATTR_EXPORT
+#else
+#define BLUETOOTH_API __GR_ATTR_IMPORT
+#endif
 
-class __GR_ATTR_EXPORT qa_bluetooth
-{
- public:
-  //! return suite of tests for all of gr-filter directory
-  static CppUnit::TestSuite *suite();
-};
-
-#endif /* _QA_BLUETOOTH_H_ */
+#endif /* INCLUDED_BLUETOOTH_API_H */

@@ -1,10 +1,10 @@
 # Copyright 2011 Free Software Foundation, Inc.
 #
-# This file is part of GNU Radio
+# This file is a part of gr-bluetooth
 #
 # GNU Radio is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2, or (at your option)
+# the Free Software Foundation; either version 3, or (at your option)
 # any later version.
 #
 # GNU Radio is distributed in the hope that it will be useful,
@@ -41,4 +41,3 @@ include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-bluetooth)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
-GR_ADD_TEST(qa_gr_bluetooth_multi_sniffer ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_gr_bluetooth_multi_sniffer.py)

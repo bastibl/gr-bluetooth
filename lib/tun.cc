@@ -1,7 +1,7 @@
 // Taken from the gssm project (http://www.thre.at/gsm)
 // Any license you like
 
-#include "tun.h"
+#include <tun.h>
 
 int mktun(const char *chan_name, unsigned char *ether_addr) {
 

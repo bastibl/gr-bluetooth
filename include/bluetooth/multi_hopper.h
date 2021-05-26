@@ -24,11 +24,11 @@
  */
 
 
-#ifndef INCLUDED_GR_BLUETOOTH_MULTI_HOPPER_H
-#define INCLUDED_GR_BLUETOOTH_MULTI_HOPPER_H
+#ifndef INCLUDED_BLUETOOTH_MULTI_HOPPER_H
+#define INCLUDED_BLUETOOTH_MULTI_HOPPER_H
 
-#include <gr_bluetooth/api.h>
-#include "gr_bluetooth/multi_block.h"
+#include <bluetooth/api.h>
+#include <bluetooth/multi_block.h>
 
 namespace gr {
   namespace bluetooth {
@@ -37,7 +37,7 @@ namespace gr {
      * \brief Sniff Bluetooth packets.
      * \ingroup bluetooth
      */
-    class GR_BLUETOOTH_API multi_hopper : virtual public multi_block
+    class BLUETOOTH_API multi_hopper : virtual public multi_block
     {
     public:
        typedef boost::shared_ptr<multi_hopper> sptr;
@@ -56,5 +56,5 @@ namespace gr {
   } // namespace bluetooth
 } // namespace gr
 
-#endif /* INCLUDED_GR_BLUETOOTH_MULTI_HOPPER_H */
+#endif /* INCLUDED_BLUETOOTH_MULTI_HOPPER_H */
 
